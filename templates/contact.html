@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+{% block title %}Order Coffee{% endblock title %}
+
+{% block body %}
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8 col-md-10">
+            <div class="card shadow-lg bg-dark text-white rounded-4">
+                <div class="card-body p-5">
+                    <h2 class="card-title text-center mb-4" style="color:#f8d210;">Order Your Coffee ☕</h2>
+                    <p class="text-center mb-4">Fill out the form below and get your favorite coffee delivered to you!</p>
+
+                    <form method="post" action="{% url 'contact' %}">
+                        {% csrf_token %}
+
+                        <div class="mb-3">
+                            <label for="inputName" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="inputName" name="Name" placeholder="John Doe" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="inputEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="inputEmail" name="Email" placeholder="example@mail.com" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="inputPhone" class="form-label">Phone</label>
+                            <input type="tel" class="form-control" id="inputPhone" name="Phone" placeholder="9876543210" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="inputAddress" class="form-label">Address</label>
+                            <input type="text" class="form-control" id="inputAddress" name="Address" placeholder="1234 Main St" required>
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label for="inputCity" class="form-label">City</label>
+                                <input type="text" class="form-control" id="inputCity" name="City" placeholder="City" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="inputState" class="form-label">State</label>
+                                <select class="form-select" id="inputState" name="State" required>
+                                    <option selected disabled>Choose State</option>
+                                    <option value="UP">Uttar Pradesh</option>
+                                    <option value="DL">Delhi</option>
+                                    <option value="PB">Punjab</option>
+                                    <option value="RJ">Rajasthan</option>
+                                    <option value="KL">Kerala</option>
+                                    <option value="MP">Madhya Pradesh</option>
+                                    <option value="UK">Uttarakhand</option>
+                                    <option value="WB">West Bengal</option>
+                                    <option value="GA">Goa</option>
+                                    <option value="MH">Maharashtra</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="coffeeType" class="form-label">Coffee Type</label>
+                            <select class="form-select" id="coffeeType" name="CoffeeType" required>
+                                <option selected disabled>Select Coffee</option>
+                                <option value="ES">Espresso</option>
+                                <option value="LA">Latte</option>
+                                <option value="MO">Mocha</option>
+                                <option value="CA">Cappuccino</option>
+                                <option value="FW">Flat White</option>
+                                <option value="CB">Cold Brew</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="quantity" class="form-label">Quantity</label>
+                            <input type="number" class="form-control" id="quantity" name="Quantity" min="1" value="1" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="instructions" class="form-label">Special Instructions (Optional)</label>
+                            <textarea class="form-control" id="instructions" name="Instructions" rows="3" placeholder="E.g., less sugar, oat milk"></textarea>
+                        </div>
+
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-warning btn-lg px-5">Place Order</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock body %}
