@@ -1,0 +1,244 @@
+{% extends 'base.html' %}
+{% block title %}menu{% endblock title %}
+{% load static %}
+
+{% block body %}
+<div class="container-fluid my-0 px-0">
+    <img src="{% static 'images/all.jpg' %}" class="d-block w-100 object-fit-cover" style="height: 500px; opacity:25%;"
+        alt="all">
+    <div class="menu_bar">
+        <style>
+            .menu_bar {
+                color: black;
+                background-color: darkgrey;
+                position: absolute;
+                top: 200px;
+                left: 300px;
+                border-radius: 15px;
+                padding: 10px;
+            }
+        </style>
+
+        <h1 style="text-align: center;">Our Menu</h1>
+        <p>Our menu’s full of the good stuff. Whatever your diet or preferences, there’s enough choice for
+            everyone.</p>
+    </div>
+    <h1 style="
+    color: black;
+    background-color: rgb(219, 238, 238);
+    text-align: center;
+    margin-top: 10px;
+    ">Classics</h1>
+
+    <div class="row my-5 px-5">
+        <div class="col-lg-4">
+            <a href="{% url 'contact' %}?item=Matcha Lattee">
+                <img src="{% static 'images/matcha.jpg' %}" class="rounded-circle" height="140" width="140"
+                    alt="matcha">
+            </a>
+            <h2 class="fw-normal">Matcha Latte</h2>
+            <p>A vibrant blend of earthy matcha and creamy milk, whisked to smooth perfection for a calming yet
+                energizing sip.</p>
+            <p>₹700</p>
+            <p><a class="btn btn-secondary" href="{% url 'contact' %}">Order Now &raquo;</a></p>
+        </div>
+        <div class="col-lg-4">
+            <a href="{% url 'contact' %}?item=Café Latte">
+                 <img src="{% static 'images/cafee latte.jpg' %}" class="rounded-circle" height="140" width="140"
+                alt="caffe latte">
+            </a>
+            <h2 class="fw-normal">Café Latte</h2>
+            <p>Smooth espresso blended with silky steamed milk, creating a creamy classic that’s comforting with every
+                sip.</p>
+            <p>₹500</p>
+            <p><a class="btn btn-secondary" href="{% url 'contact' %}">Order Now &raquo;</a></p>
+        </div>
+        <div class="col-lg-4">
+            <a href="{% url 'contact' %}?item=Americano">
+                <img src="{% static 'images/americano.jpg' %}" class="rounded-circle" height="140" width="140"
+                alt="americano">
+            </a>
+            <h2 class="fw-normal">Americano</h2>
+            <p>Bold espresso gently blended with hot water, giving you a smooth, rich coffee with a lingering depth of
+                flavour.</p>
+            <p>₹300</p>
+            <p><a class="btn btn-secondary" href="{% url 'contact' %}">Order Now &raquo;</a></p>
+        </div>
+        <div class="col-lg-4">
+            <a href="{% url 'contact' %}?item=Mocha">
+                <img src="{% static 'images/mocha3.jpg' %}" class="rounded-circle" height="140" width="140" alt="mocha">
+            </a>
+            <h2 class="fw-normal">Mocha</h2>
+            <p>A luscious fusion of rich espresso, velvety chocolate, and creamy milk — indulgence in every sip.</p>
+            <p>₹500</p>
+            <p><a class="btn btn-secondary" href="{% url 'contact' %}">Order Now &raquo;</a></p>
+        </div>
+        <div class="col-lg-4">
+            <a href="{% url 'contact' %}?item=Café Caramella">
+                <img src="{% static 'images/caramel2.jpg' %}" class="rounded-circle" height="140" width="140" alt="caramel">
+            </a>
+            <h2 class="fw-normal">Café Caramella</h2>
+            <p>a smooth espresso swirled with buttery caramel and creamy milk.
+                Sweet, silky, and indulgent—like a dessert in a cup that keeps you coming back for more!.</p>
+            <p>₹700</p>
+            <p><a class="btn btn-secondary" href="{% url 'contact' %}">Order Now &raquo;</a></p>
+        </div>
+        <div class="col-lg-4">
+            <a href="{% url 'contact' %}?item=Caramel soy Lattes">
+                  <img src="{% static 'images/caramel soy latte.jpg' %}" class="rounded-circle" height="140" width="140"
+                alt="caramel">
+            </a>
+            <h2 class="fw-normal">Caramel soy Lattes</h2>
+            <p>A silky blend of creamy soy milk and bold espresso, sweetened with golden caramel for a smooth, indulgent
+                sip.</p>
+            <p>₹700</p>
+            <p><a class="btn btn-secondary" href="{% url 'contact' %}">Order Now &raquo;</a></p>
+        </div>
+    </div>
+
+    <h1 style="
+    color: black;
+    background-color: azure;
+    text-align: center;
+    margin-top: 5px;
+    ">Frappe</h1>
+    <div class="row my-5 px-5">
+        <div class="col-lg-4">
+            <a href="{% url 'contact' %}?item=Strawberry Crème">
+                <img src="{% static 'images/strawberry3.jpg' %}" class="rounded-circle" height="140" width="140"
+                alt="strawberry">
+            </a>
+            <h2 class="fw-normal">Strawberry Crème</h2>
+            <p>A refreshing swirl of sweet strawberries and creamy milk, blended into an icy, dreamy delight.</p>
+            <p>₹800</p>
+            <p><a class="btn btn-secondary" href="{% url 'contact' %}">Order Now &raquo;</a></p>
+        </div>
+        <div class="col-lg-4">
+            <a href="{% url 'contact' %}?item=Double Chocolatey Crème">
+                <img src="{% static 'images/choco.jpg' %}" class="rounded-circle" height="140" width="140" alt="Chocolate">
+            </a>
+            <h2 class="fw-normal">Double Chocolatey Crème</h2>
+            <p>An indulgent blend of rich cocoa and creamy milk, finished with a swirl of chocolate for twice the
+                delight.</p>
+            <p>₹800</p>
+            <p><a class="btn btn-secondary" href="{% url 'contact' %}">Order Now &raquo;</a></p>
+        </div>
+
+        <div class="col-lg-4">
+            <a href="{% url 'contact' %}?item=Charming Hazelnut">
+                <img src="{% static 'images/hazelnut2.jpg' %}" class="rounded-circle" height="140" width="140"
+                alt="hazelnut">
+            </a>
+            <h2 class="fw-normal">Charming Hazelnut</h2>
+            <p>Smooth, crunchy, and irresistibly sweet — a frappé that charms with every sip of hazelnut-chocolate
+                bliss.</p>
+            <p>₹900</p>
+            <p><a class="btn btn-secondary" href="{% url 'contact' %}">Order Now &raquo;</a></p>
+        </div>
+        <div class="col-lg-4">
+            <a href="{% url 'contact' %}?item=Serene Caramel">
+                <img src="{% static 'images/Serene Caramel.jpg' %}" class="rounded-circle" height="140" width="140"
+                alt="serene caramel">
+            </a>
+            <h2 class="fw-normal">Serene Caramel</h2>
+            <p>A calming blend of rich espresso and silky caramel, crafted to bring warmth and comfort in every sip.</p>
+            <p>₹900</p>
+            <p><a class="btn btn-secondary" href="{% url 'contact' %}">Order Now &raquo;</a></p>
+        </div>
+        <div class="col-lg-4">
+            <a href="{% url 'contact' %}?item=Mocha Cookie Crumble">
+                <img src="{% static 'images/crumble.jpg' %}" class="rounded-circle" height="140" width="140" alt="crumble">
+            </a>
+            <h2 class="fw-normal">Mocha Cookie Crumble</h2>
+            <p>Bold espresso meets velvety chocolate and crushed cookies, topped with creamy goodness for a decadent
+                treat.</p>
+            <p>₹900</p>
+            <p><a class="btn btn-secondary" href="{% url 'contact' %}">Order Now &raquo;</a></p>
+        </div>
+        <div class="col-lg-4">
+            <a href="{% url 'contact' %}?item=Vanilla Bean Crème">
+                <img src="{% static 'images/vanilla.jpg' %}" class="rounded-circle" height="140" width="140" alt="Vanilla">
+            </a>
+            <h2 class="fw-normal">Vanilla Bean Crème</h2>
+            <p>Indulge in the smooth, velvety charm of Vanilla Bean Crème, where rich cream meets the delicate sweetness
+                of real vanilla.</p>
+            <p>₹600</p>
+            <p><a class="btn btn-secondary" href="{% url 'contact' %}">Order Now &raquo;</a></p>
+        </div>
+        <div class="col-lg-4">
+            <a href="{% url 'contact' %}?item=Pistachio Crème">
+                <img src="{% static 'images/pistachio.jpg' %}" class="rounded-circle" height="140" width="140"
+                alt="pistachio">
+            </a>
+            <h2 class="fw-normal">Pistachio Crème</h2>
+            <p>Savor the nutty elegance of Pistachio Crème Coffee—creamy coffee infused with the rich, buttery flavor of
+                pistachios. Every sip is a luxurious, slightly sweet escape for your taste buds.</p>
+            <p>₹950</p>
+            <p><a class="btn btn-secondary" href="{% url 'contact' %}">Order Now &raquo;</a></p>
+        </div>
+    </div>
+    <h1 style="
+    color: black;
+    background-color: azure;
+    text-align: center;
+    margin-top: 5px;
+    ">Iced Coffee</h1>
+    <div class="row my-5 px-5">
+        <div class="col-lg-4">
+            <a href="{% url 'contact' %}?item=Iced Cappuccino">
+                <img src="{% static 'images/iced1.jpg' %}" class="rounded-circle" height="140" width="140" alt="iced1">
+            </a>
+            <h2 class="fw-normal">Iced Cappuccino</h2>
+            <p>Wake up your senses with an Iced Cappuccino—bold espresso, frothy milk, and chilled perfection in every
+                sip. It’s coffee with a cool, irresistible twist!</p>
+            <p>₹500</p>
+            <p><a class="btn btn-secondary" href="{% url 'contact' %}">Order Now &raquo;</a></p>
+        </div>
+        <div class="col-lg-4">
+            <a href="{% url 'contact' %}?item=Iced Spanish Latte">
+                <img src="{% static 'images/iced2.jpg' %}" class="rounded-circle" height="140" width="140" alt="iced2">
+            </a>
+            <h2 class="fw-normal">Iced Spanish Latte</h2>
+            <p>Dive into the creamy decadence of an Iced Spanish Latte—rich espresso meets sweetened milk over ice,
+                creating a velvety, chilled delight. Every sip is a perfect balance of bold and sweet.
+            </p>
+            <p>₹500</p>
+            <p><a class="btn btn-secondary" href="{% url 'contact' %}">Order Now &raquo;</a></p>
+        </div>
+        <div class="col-lg-4">
+            <a href="{% url 'contact' %}?item=Iced Flat Mocha">
+                <img src="{% static 'images/iced3.jpg' %}" class="rounded-circle" height="140" width="140" alt="iced3">
+            </a>
+            <h2 class="fw-normal">Iced Flat Mocha</h2>
+            <p>Experience the Iced Flat Mocha—a luscious blend of smooth chocolate and bold espresso, served cold for
+                that perfect refreshing kick. Sweet, rich, and effortlessly indulgent in every sip.
+            </p>
+            <p>₹500</p>
+            <p><a class="btn btn-secondary" href="{% url 'contact' %}">Order Now &raquo;</a></p>
+        </div>
+        <div class="col-lg-4">
+            <a href="{% url 'contact' %}?item=Iced Americano">
+                <img src="{% static 'images/iced4.jpg' %}" class="rounded-circle" height="140" width="140" alt="iced4">
+            </a>
+            <h2 class="fw-normal">Iced Americano</h2>
+            <p>Chilled perfection in a cup, bold espresso meets crisp ice. A refreshing kick that wakes your senses with
+                every sip. Simple, strong, and utterly invigorating
+            </p>
+            <p>₹400</p>
+            <p><a class="btn btn-secondary" href="{% url 'contact' %}">Order Now &raquo;</a></p>
+        </div>
+        <div class="col-lg-4">
+            <a href="{% url 'contact' %}?item=Iced Flat White">
+                <img src="{% static 'images/iced5.jpg' %}" class="rounded-circle" height="140" width="140" alt="iced5">
+            </a>
+            <h2 class="fw-normal">Iced Flat White</h2>
+            <p>Smooth, velvety, and perfectly chilled—espresso meets creamy milk in harmony. A gentle coffee hug that’s
+                cool, bold, and effortlessly elegant
+            </p>
+            <p>₹500</p>
+            <p><a class="btn btn-secondary" href="{% url 'contact' %}">Order Now &raquo;</a></p>
+        </div>
+    </div>
+
+</div>
+{% endblock body %}
